@@ -145,4 +145,14 @@ public class UserTo implements Serializable {
                 ", remark='" + remark + '\'' +
                 '}';
     }
+
+
+    public static void main(String[] args) {
+        String str="insert into user_from(user_name,sex,age,address,create_time,update_time,`status`,remark)\n" +
+                "VALUES ('tom', '1', '1', 'beijiing', '2016-10-12 12:27:11', '2016-10-12 12:27:13', '1', '');" ;
+
+        for(int i=0;i<10000;i++){
+            System.out.println(str);
+        }
+    }
 }

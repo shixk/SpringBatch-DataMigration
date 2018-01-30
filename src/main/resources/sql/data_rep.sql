@@ -53,7 +53,7 @@ CREATE TABLE `batch_job_execution_context` (
 -- ----------------------------
 DROP TABLE IF EXISTS `batch_job_execution_params`;
 CREATE TABLE `batch_job_execution_params` (
-  `JOB_EXECUTION_ID` bigint(20) NOT NULL,
+  `JOB_EXECUTION_ID` bigint(20) NOT NULL AUTO_INCREMENT,
   `TYPE_CD` varchar(6) NOT NULL,
   `KEY_NAME` varchar(100) NOT NULL,
   `STRING_VAL` varchar(250) default NULL,
@@ -70,7 +70,7 @@ CREATE TABLE `batch_job_execution_params` (
 -- ----------------------------
 DROP TABLE IF EXISTS `batch_job_execution_seq`;
 CREATE TABLE `batch_job_execution_seq` (
-  `ID` bigint(20) NOT NULL,
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
   `UNIQUE_KEY` char(1) NOT NULL,
   UNIQUE KEY `UNIQUE_KEY_UN` (`UNIQUE_KEY`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -80,7 +80,7 @@ CREATE TABLE `batch_job_execution_seq` (
 -- ----------------------------
 DROP TABLE IF EXISTS `batch_job_instance`;
 CREATE TABLE `batch_job_instance` (
-  `JOB_INSTANCE_ID` bigint(20) NOT NULL,
+  `JOB_INSTANCE_ID` bigint(20) NOT NULL AUTO_INCREMENT,
   `VERSION` bigint(20) default NULL,
   `JOB_NAME` varchar(100) NOT NULL,
   `JOB_KEY` varchar(32) NOT NULL,
@@ -93,7 +93,7 @@ CREATE TABLE `batch_job_instance` (
 -- ----------------------------
 DROP TABLE IF EXISTS `batch_job_seq`;
 CREATE TABLE `batch_job_seq` (
-  `ID` bigint(20) NOT NULL,
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
   `UNIQUE_KEY` char(1) NOT NULL,
   UNIQUE KEY `UNIQUE_KEY_UN` (`UNIQUE_KEY`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -143,7 +143,7 @@ CREATE TABLE `batch_step_execution_context` (
 -- ----------------------------
 DROP TABLE IF EXISTS `batch_step_execution_seq`;
 CREATE TABLE `batch_step_execution_seq` (
-  `ID` bigint(20) NOT NULL,
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
   `UNIQUE_KEY` char(1) NOT NULL,
   UNIQUE KEY `UNIQUE_KEY_UN` (`UNIQUE_KEY`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
